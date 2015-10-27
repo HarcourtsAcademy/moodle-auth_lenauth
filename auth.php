@@ -772,6 +772,11 @@ class auth_plugin_lenauth extends auth_plugin_base {
                 switch ( $authprovider ) {
                     case 'facebook':
                         $queryparams['access_token'] = $access_token;
+                        
+                        /* START Academy Patch M#034 Facebook API v2.4 requires user profile fields to be specified in the call */
+                        $queryparams['fields'] = 'id,email,first_name,last_name,link,locale,name,timezone,updated_time,verified';
+                        /* END Academy Patch M#034 */
+                        
                         $curl_response               = $curl->get( $request_api_url . '?' . $this->_generate_query_data( $queryparams ) );
                         $curl_final_data             = json_decode($curl_response, true);
 
