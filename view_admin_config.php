@@ -86,23 +86,6 @@ global $CFG;
         </td>
         <td width="50%"><?php echo get_string( 'auth_lenauth_can_reset_password_desc', 'auth_lenauth' ); ?></td>
     </tr>
-    <!--tr>
-        <td align="right" width="15%"><label for="password_expire"><?php echo get_string( 'password_expire_key', 'auth_lenauth' ); ?></label></td>
-        <td width="35%"><?php echo html_writer::empty_tag( 'input',
-                                        array( 'type' => 'text',
-                                            'id'      => 'password_expire',
-                                            'name'    => 'password_expire',
-                                            'class'   => 'password_expire',
-                                            'value'   => $config->password_expire,
-                                            'size'    => 5,
-                                            'autocomplete' => 'off' )
-                                        );
-        if ( isset( $err['password_expire'] ) ) {
-            echo $OUTPUT->error_text( $err['password_expire'] );
-        } ?>
-        </td>
-        <td width="50%"><?php echo get_string( 'password_expire_desc', 'auth_lenauth' ); ?></td>
-    </tr-->
     <tr>
         <td width="50%" colspan="2"><?php 
             echo html_writer::checkbox( 
