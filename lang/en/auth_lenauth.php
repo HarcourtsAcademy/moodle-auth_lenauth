@@ -42,7 +42,6 @@ $string['auth_lenauth_static_html'] = 'Static HTML-code';
 $string['auth_lenauth_style_not_defined'] = 'This style is not defined as a plugin style';
 $string['auth_lenauth_locale_desc'] = 'Some services have local and international logos, for example, VK and Yandex';
 $string['auth_lenauth_default_country_desc'] = 'Every user registered via LenAuth will have this country selected by default on register page';
-//$string['can_change_password'] = 'User can change password';
 $string['auth_lenauth_can_reset_password_key'] = 'User can reset/change an internal password (<em>recommended</em>)';
 $string['auth_lenauth_can_reset_password_desc'] = 'If the option enabled, user can change an internal password (<strong>nothing by default</strong>) and authorise via Moodle login form without OAuth plugin';
 //$string['password_expire_key'] = 'Number of days to user password expires';

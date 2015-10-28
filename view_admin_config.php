@@ -73,18 +73,6 @@ global $CFG;
         </td>
         <td width="50%"><?php echo get_string( 'auth_lenauth_locale_desc', 'auth_lenauth' ); ?></td>
     </tr>
-    <!--tr>
-        <td width="100%" colspan="3"><?php 
-            echo html_writer::checkbox( 
-                    'can_change_password', 1, 
-                    $config->can_change_password, 
-                    get_string( 'can_change_password', 'auth_lenauth' ), array( 'id' => 'can_change_password' )
-            );
-            if ( isset( $err['can_change_password'] ) ) {
-                echo $OUTPUT->error_text( $err['can_change_password'] );
-            } ?>
-        </td>
-    </tr-->
     <tr>
         <td width="50%" colspan="2"><?php 
             echo html_writer::checkbox( 
