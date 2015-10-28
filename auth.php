@@ -291,7 +291,9 @@ class auth_plugin_lenauth extends auth_plugin_base {
 
         //check for user (username) exist and authentication method
         if ( !empty( $user ) && ( $user->auth == 'lenauth' ) ) {
-            $code = optional_param( 'code', '', PARAM_TEXT );
+            /* START Academy Patch M#035 auth_lenauth accesses wrong URL parameter when checking social login */
+            $code = optional_param( 'oauthcode', '', PARAM_TEXT );
+            /* END Academy Patch M#035 */
             if ( empty( $code ) ) {
                 return false;
             }
