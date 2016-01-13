@@ -5,7 +5,7 @@ This plugin allows easy auth method for your Moodle. You just need to register a
 
 ## Features
 - a lot of settings
-- a lot of social buttons skins
+- a lot of social buttons skins including [Font-Awesome](https://fortawesome.github.io/Font-Awesome/) and [Bootstrap](http://getbootstrap.com/) based skins
 - detailed description about OAuth applications register
 - Russian language includes
 - own buttons text (some skins)
@@ -41,6 +41,15 @@ Its very-very simple. You have two methods: PHP-code or static HTML-code.
 You're welcome for pull requests but against master branch. Thanks!
 
 ## Changelog
+#### Version 1.2.4 (2015123100)
+- Yet another [Font-Awesome](https://fortawesome.github.io/Font-Awesome/) and [Bootstrap](http://getbootstrap.com/) based buttons style from [Mark Samberg](https://github.com/mjsamberg) from [The Friday Institute](https://github.com/TheFridayInstitute) ([pull request #9](https://github.com/tigusigalpa/moodle-auth_lenauth/pull/9))
+- Some code improves to hide human errors from Moodle frontend
+- VK API version update to **5.42**
+
+#### Version 1.2.3 (2015112001)
+- Moodle 3.0 support. Thanks to [Amiad](https://github.com/amiad) and [Jarosław Maciejewski](https://github.com/nitro2010)
+- Development mode option added
+
 #### Version 1.2.2 (2015071100)
 - Improvement from [Mark Samberg](https://github.com/mjsamberg) ([pull request #3](https://github.com/tigusigalpa/moodle-auth_lenauth/pull/3)) about [Bootstrap](http://getbootstrap.com/) + [Font Awesome](http://fortawesome.github.io/Font-Awesome/) buttons styles. **NOTE** your current Moodle theme requires Bootstrap and Font Awesome to correct output this buttons skin. Yandex and Mail.Ru logos are out of Font Awesome for now...
 - Double email correct check

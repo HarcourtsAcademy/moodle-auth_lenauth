@@ -4,7 +4,7 @@
  * @author Igor Sazonov ( @tigusigalpa )
  * @link http://lms-service.org/lenauth-plugin-oauth-moodle/
  * @license http://www.gnu.org/copyleft/gpl.html GNU Public License
- * @version 1.2.2
+ * @version 1.2.4
  * @uses auth_plugin_base core class
  *
  * Authentication Plugin: LenAuth Authentication
@@ -191,7 +191,7 @@ class auth_plugin_lenauth extends auth_plugin_base {
         'smooth-w64-classic-square', 'smooth-w64-classic-rounded', 
         'smooth-w64-classic-circle', 'simple-3d', 'simple-3d-small', 
         '3d-circle', '3d-circle-small', 'simple-flat', 'simple-flat-small', 
-        'simple-flat-circle', 'simple-flat-circle-small', 'bootstrap-font-awesome'
+        'simple-flat-circle', 'simple-flat-circle-small', 'bootstrap-font-awesome','bootstrap-font-awesome-simple'
     );
 
     /**
@@ -208,7 +208,7 @@ class auth_plugin_lenauth extends auth_plugin_base {
      * VK API version
      * @var string
      */
-    public static $vk_api_version = '5.33';
+    public static $vk_api_version = '5.42';
     
     /**
      * Yahoo API version
@@ -1056,7 +1056,11 @@ class auth_plugin_lenauth extends auth_plugin_base {
                     default:
                         throw new moodle_exception( 'Unknown OAuth Provider', 'auth_lenauth' );
                 }
-
+                
+                //development mode
+                if ( $CFG->debugdeveloper == 1 && $this->_oauth_config->auth_lenauth_dev_mode ) {
+                    throw new moodle_exception( 'lenauth_debug_info_not_error', 'auth_lenauth', '', 'AUTHPROVIDER: ' . $authprovider . ' >>>>>REQUEST:' . http_build_query( $queryparams, '', '<--->' ) . ' >>>>>RESPONSE: ' . http_build_query( $curl_final_data, '', ' <---> ' ) );
+                }
                 /**
                  * Check for email returned by webservice. If exist - check for user with this email in Moodle Database
                  */
@@ -1282,6 +1286,11 @@ class auth_plugin_lenauth extends auth_plugin_base {
         } else {
             $config->auth_lenauth_retrieve_avatar = 1;
         }
+        if ( empty( $config->auth_lenauth_dev_mode ) ) {
+            $config->auth_lenauth_dev_mode = 0;
+        } else {
+            $config->auth_lenauth_dev_mode = 1;
+        }
         
         if ( !isset( $config->auth_lenauth_display_buttons ) ) {
             $config->auth_lenauth_display_buttons = 'inline-block';
@@ -1495,6 +1504,11 @@ class auth_plugin_lenauth extends auth_plugin_base {
             } else {
                 $config->auth_lenauth_retrieve_avatar = 1;
             }
+            if ( empty( $config->auth_lenauth_dev_mode ) ) {
+                $config->auth_lenauth_dev_mode = 0;
+            } else {
+                $config->auth_lenauth_dev_mode = 1;
+            }
             
             if ( !isset( $config->auth_lenauth_display_buttons ) ) {
                 $config->auth_lenauth_display_buttons = 'inline-block';
@@ -1700,6 +1714,7 @@ class auth_plugin_lenauth extends auth_plugin_base {
             set_config('auth_lenauth_can_reset_password',      intval( $config->auth_lenauth_can_reset_password ),    'auth/lenauth');
             set_config('auth_lenauth_can_confirm',             intval( $config->auth_lenauth_can_confirm ),           'auth/lenauth');
             set_config('auth_lenauth_retrieve_avatar',         intval( $config->auth_lenauth_retrieve_avatar ),       'auth/lenauth');
+            set_config('auth_lenauth_dev_mode',                intval( $config->auth_lenauth_dev_mode ),              'auth/lenauth');
             
             set_config('auth_lenauth_display_buttons',         trim( $config->auth_lenauth_display_buttons ),         'auth/lenauth');
             set_config('auth_lenauth_button_width',            intval( $config->auth_lenauth_button_width ),          'auth/lenauth');
