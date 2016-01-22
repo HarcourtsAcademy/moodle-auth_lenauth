@@ -1094,6 +1094,8 @@ class auth_plugin_lenauth extends auth_plugin_base {
                  * If user with email from webservice not exists, we will create an account
                  */
                 if ( empty( $user_lenauth ) ) {
+                    throw new moodle_exception( 'Account not found.', 'auth_lenauth' );
+
                     $username = $this->_oauth_config->auth_lenauth_user_prefix . $last_user_number;
                     
                     //check for username exists in DB
