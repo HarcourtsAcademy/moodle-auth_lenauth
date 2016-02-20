@@ -533,6 +533,9 @@ a.btn.btn-default.lenauth-bootstrap-vk:hover, a.btn.btn-default.lenauth-bootstra
     color: #45668e;
 }
 
+.lenauth-bootstrap-simple{
+    padding: 6px 8px;
+}
 
 a.btn.btn-default.lenauth-bootstrap-simple-facebook{
     background: #3b5998;

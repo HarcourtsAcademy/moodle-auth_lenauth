@@ -751,13 +751,13 @@ class auth_lenauth_out extends auth_plugin_lenauth {
                     case 'bootstrap-font-awesome':
                         $has_text = true;
                         $class_div_str = 'lenauth-bootstrap';
-                        $facebook_bca = "<i class='fa fa-facebook-square'></i>&nbsp;";
-                        $google_bca = "<i class='fa fa-google-plus-square'></i>&nbsp;";
-                        $yahoo_bca = "<i class='fa fa-yahoo'></i>&nbsp;";
-                        $twitter_bca = "<i class='fa fa-twitter-square'></i>&nbsp;";
-                        $vk_bca = "<i class='fa fa-vk'></i>&nbsp;";
-                        $yandex_bca = "<i class='fa fa-yandex'></i>&nbsp;";
-                        $mailru_bca = "<i class='fa fa-mailru'></i>&nbsp;";
+                        $facebook_bca = "<i class='fa fa-fw fa-facebook-square'></i>&nbsp;";
+                        $google_bca = "<i class='fa fa-fw fa-google-plus-square'></i>&nbsp;";
+                        $yahoo_bca = "<i class='fa fa-fw fa-yahoo'></i>&nbsp;";
+                        $twitter_bca = "<i class='fa fa-fw fa-twitter-square'></i>&nbsp;";
+                        $vk_bca = "<i class='fa fa-fw fa-vk'></i>&nbsp;";
+                        $yandex_bca = "<i class='fa fa-fw fa-yandex'></i>&nbsp;";
+                        $mailru_bca = "<i class='fa fa-fw fa-mailru'></i>&nbsp;";
                         $facebook_class = 'btn btn-default lenauth-bootstrap-facebook';
                         $google_class = 'btn btn-default lenauth-bootstrap-google';
                         $yahoo_class = 'btn btn-default lenauth-bootstrap-yahoo';
@@ -776,13 +776,13 @@ class auth_lenauth_out extends auth_plugin_lenauth {
                     case 'bootstrap-font-awesome-simple':
                         $has_text = false;
                         $class_div_str = 'lenauth-bootstrap-simple';
-                        $facebook_bca = "<i class='fa fa-facebook'></i>";
-                        $google_bca = "<i class='fa fa-google-plus'></i>";
-                        $yahoo_bca = "<i class='fa fa-yahoo'></i>&nbsp;";
-                        $twitter_bca = "<i class='fa fa-twitter'></i>";
-                        $vk_bca = "<i class='fa fa-vk'></i>";
-                        $yandex_bca = "<i class='fa fa-yandex'></i>";
-                        $mailru_bca = "<i class='fa fa-mailru'></i>";
+                        $facebook_bca = "<i class='fa fa-fw fa-facebook'></i>";
+                        $google_bca = "<i class='fa fa-fw fa-google-plus'></i>";
+                        $yahoo_bca = "<i class='fa fa-fw fa-yahoo'></i>&nbsp;";
+                        $twitter_bca = "<i class='fa fa-fw fa-twitter'></i>";
+                        $vk_bca = "<i class='fa fa-fw fa-vk'></i>";
+                        $yandex_bca = "<i class='fa fa-fw fa-yandex'></i>";
+                        $mailru_bca = "<i class='fa fa-fw fa-mailru'></i>";
                         $facebook_class = 'btn btn-default lenauth-bootstrap-simple lenauth-bootstrap-simple-facebook';
                         $google_class = 'btn btn-default lenauth-bootstrap-simple lenauth-bootstrap-simple-google';
                         $yahoo_class = 'btn btn-default lenauth-bootstrap-simple lenauth-bootstrap-simple-yahoo';
