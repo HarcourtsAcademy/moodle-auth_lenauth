@@ -5,7 +5,7 @@ This plugin allows easy auth method for your Moodle. You just need to register a
 
 ## Features
 - a lot of settings
-- a lot of social buttons skins
+- a lot of social buttons skins including [Font-Awesome](https://fortawesome.github.io/Font-Awesome/) and [Bootstrap](http://getbootstrap.com/) based skins
 - detailed description about OAuth applications register
 - Russian language includes
 - own buttons text (some skins)
@@ -41,6 +41,17 @@ Its very-very simple. You have two methods: PHP-code or static HTML-code.
 You're welcome for pull requests but against master branch. Thanks!
 
 ## Changelog
+#### Version 1.2.5 (2016071500)
+- Fix with cookie clean while user logouts. Issue from [Mark Samberg](https://github.com/mjsamberg) from [The Friday Institute](https://github.com/TheFridayInstitute) ([pull request #5](https://github.com/tigusigalpa/moodle-auth_lenauth/issues/5))
+- Some code improves
+- Suspended user login lock. Issue from [V-Zemlyakov](https://github.com/V-Zemlyakov) ([pull request #12](https://github.com/tigusigalpa/moodle-auth_lenauth/issues/12))
+- VK API version update to **5.52**
+
+#### Version 1.2.4 (2015123100)
+- Yet another [Font-Awesome](https://fortawesome.github.io/Font-Awesome/) and [Bootstrap](http://getbootstrap.com/) based buttons style from [Mark Samberg](https://github.com/mjsamberg) from [The Friday Institute](https://github.com/TheFridayInstitute) ([pull request #9](https://github.com/tigusigalpa/moodle-auth_lenauth/pull/9))
+- Some code improves to hide human errors from Moodle frontend
+- VK API version update to **5.42**
+
 #### Version 1.2.3 (2015112001)
 - Moodle 3.0 support. Thanks to [Amiad](https://github.com/amiad) and [Jarosław Maciejewski](https://github.com/nitro2010)
 - Development mode option added
