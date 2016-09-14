@@ -819,7 +819,7 @@ class auth_lenauth_out extends auth_plugin_lenauth {
                     $style_div_str .= '"';
                     $style_button_str .= '"';
 
-                    $ret .= '<div class="lenauth-buttons' . ( !empty( $class_div_str ) ? ' ' . $class_div_str : '' ) .'"' . $style_div_str . '><ul>';
+                    $ret .= '<div class="lenauth-buttons' . ( !empty( $class_div_str ) ? ' ' . $class_div_str : '' ) .'"' . $style_div_str . '><ul class="lenauth-button-list">';
                     
                     $order_array = isset( $this->_oauth_config->auth_lenauth_order ) ? json_decode( $this->_oauth_config->auth_lenauth_order, true ) : $this->_default_order;
                     
